@@ -97,3 +97,125 @@
 .wp-block-tabor-dark-mode-toggle__input:focus-visible + .wp-block-tabor-dark-mode-toggle__track {
     outline: -webkit-focus-ring-color auto 1px;
 }
+
+// Light mode color palette overrides for monochrome.blog
+.theme-light {
+    // Override WordPress color custom properties
+    --wp--preset--color--primary: #f7f8f3;
+    --wp--preset--color--secondary: #030201;
+    --wp--preset--color--foreground: #030201;
+    --wp--preset--color--background: #f7f8f3;
+    --wp--preset--color--tertiary: #f6f7f280;
+
+    // Direct background and text color overrides
+    background-color: #f7f8f3;
+    color: #030201;
+
+    // Override body element
+    body {
+        background-color: #f7f8f3;
+        color: #030201;
+    }
+
+    // Fix heading text color for light mode
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: #030201;
+    }
+
+    // Fix paragraph and general text
+    p,
+    span,
+    div,
+    li,
+    a {
+        color: inherit;
+    }
+
+    // Override WordPress utility classes
+    .has-primary-background-color {
+        background-color: #f7f8f3 !important;
+    }
+
+    .has-secondary-background-color {
+        background-color: #030201 !important;
+    }
+
+    .has-primary-color {
+        color: #f7f8f3 !important;
+    }
+
+    .has-secondary-color {
+        color: #030201 !important;
+    }
+
+    .has-foreground-color {
+        color: #030201 !important;
+    }
+
+    .has-background-background-color {
+        background-color: #f7f8f3 !important;
+    }
+
+    // Fix links
+    a {
+        color: #030201;
+
+        &:hover {
+            color: #f6f7f280;
+        }
+    }
+
+    // Fix border colors (header/footer borders)
+    * {
+        border-color: #030201;
+    }
+
+    .wp-block-separator {
+        border-color: #030201 !important;
+        color: #030201;
+    }
+
+    // Header and footer border overrides
+    header,
+    footer,
+    .wp-block-template-part,
+    [class*="header"],
+    [class*="footer"] {
+        border-color: #030201 !important;
+    }
+
+    // Cover block heading background fix
+    .wp-block-cover {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        [class*="heading"],
+        .wp-block-cover__inner-container h1,
+        .wp-block-cover__inner-container h2 {
+            background-color: #f7f8f3 !important;
+            color: #030201 !important;
+        }
+    }
+
+    // Cover block elements
+    .wp-block-cover .wp-element-caption,
+    .wp-block-cover figcaption {
+        background-color: #f7f8f3 !important;
+        color: #030201 !important;
+    }
+
+    // Invert duotone filter for light mode
+    .wp-block-post-featured-image img,
+    .wp-block-cover img,
+    .wp-block-avatar img {
+        filter: invert(1);
+    }
+}
