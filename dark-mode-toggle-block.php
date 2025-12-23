@@ -44,11 +44,11 @@ function tabordarkmodetoggleblock_scripts() {
     $inline_script = '
 		(function() {
 			const rootElement = document.documentElement;
-			const isDarkMode = localStorage.getItem("darkMode") === "enabled";
-			const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+			const isLightMode = localStorage.getItem("lightMode") === "enabled";
+			const prefersLight = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
 
-			// Apply the "theme-dark" class based on user or system preference
-			rootElement.classList.toggle("theme-dark", isDarkMode || (!localStorage.getItem("darkMode") && prefersDark));
+			// Apply the "theme-light" class based on user or system preference
+			rootElement.classList.toggle("theme-light", isLightMode || (!localStorage.getItem("lightMode") && prefersLight));
 		})();
     ';
 

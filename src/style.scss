@@ -74,21 +74,21 @@
 	}
 }
 
-.theme-dark .wp-block-tabor-dark-mode-toggle__input + .wp-block-tabor-dark-mode-toggle__track .wp-block-tabor-dark-mode-toggle__selector {
+.theme-light .wp-block-tabor-dark-mode-toggle__input + .wp-block-tabor-dark-mode-toggle__track .wp-block-tabor-dark-mode-toggle__selector {
 	transform: translateX(calc(var(--icon-size) * 1.25));
 }
 
-.wp-block-tabor-dark-mode-toggle__icon--dark {
+.wp-block-tabor-dark-mode-toggle__icon--light {
 	visibility: hidden;
 }
 
-.theme-dark {
+.theme-light {
 
-	.wp-block-tabor-dark-mode-toggle__icon--light {
+	.wp-block-tabor-dark-mode-toggle__icon--dark {
 		visibility: hidden;
 	}
 
-	.wp-block-tabor-dark-mode-toggle__icon--dark {
+	.wp-block-tabor-dark-mode-toggle__icon--light {
 		visibility: visible;
 	}
 }
